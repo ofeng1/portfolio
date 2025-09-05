@@ -19,7 +19,7 @@ const rows = [
                 <video className="w-[460px]" autoPlay loop muted playsInline preload="metadata">
                     <source src="/about_me.mp4" type="video/mp4" />
                 </video>
-                <p className="text-white font-[Inter] text-[100%] font-light">I'm <b>Owen Feng</b>, an engineer passionate about the fields of <b>finance</b>, <b>software</b>, and <b>AI</b>. I enjoy working on all kinds of projects in these areas, whether it’s building predictive models, creating scalable systems, or designing simple apps people enjoy using. I’ve worked in startups, led data science projects, and spent plenty of time hands-on with code, always aiming to make complex ideas easy to understand and use.</p>
+                <p className="text-white font-[Inter] text-[100%] font-light">I&apos;m <b>Owen Feng</b>, an engineer passionate about the fields of <b>finance</b>, <b>software</b>, and <b>AI</b>. I enjoy working on all kinds of projects in these areas, whether it’s building predictive models, creating scalable systems, or designing simple apps people enjoy using. I’ve worked in startups, led data science projects, and spent plenty of time hands-on with code, always aiming to make complex ideas easy to understand and use.</p>
             </div>
         )
     },
@@ -31,6 +31,7 @@ const rows = [
             <div className="flex flex-col gap-[1rem] w-[80%] mx-auto text-left">
                 <img 
                     src={ucsb_img.src}
+                    alt="UCSB Logo"
                     className="self-center w-[180px] bg-white rounded-full"
                 />
                 <p className="text-white font-[Inter] text-[100%] font-light"><b>🏫 Name:</b> University of California, Santa Barbara</p>
@@ -103,6 +104,7 @@ const rows = [
                     >
                         <img 
                             src={sonnet_img.src} 
+                            alt="Sonnet AI"
                             style={{
                                 width: 120,
                             }}
@@ -146,6 +148,7 @@ const rows = [
                     >
                         <img 
                             src={vannevar_img.src} 
+                            alt="Vannevar Labs"
                             className="w-[120px]"
                         />
                     </motion.div>
@@ -170,6 +173,7 @@ const rows = [
             <div className="flex flex-col gap-[1rem] items-center justify-center width-full">
                 <img 
                     src={resume_img.src} 
+                    alt="Resume thumbnail"
                     className="w-[400px] h-auto"
                 />
             </div>

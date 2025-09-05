@@ -7,6 +7,7 @@ import { useRef } from "react";
 import github from "../images_and_whatnot/github_img.png";
 import code from "../images_and_whatnot/code.webp";
 import document from "../images_and_whatnot/document.png";
+import Image from "next/image";
 
 const SkeletonOne: React.FC = () => {
     return(
@@ -88,9 +89,11 @@ const Github = ({ link, size = 28 } : { link: string; size?: number }) => (
         className="inline-flex"
         style={{ width: size, height: size }}
     >
-        <img
-            src={github.src}
+        <Image
+            src={github}
             alt="GitHub"
+            width={size}
+            height={size}
             className="w-full h-full object-cover block bg-transparent radius-[4px]"
         />
     </a>
@@ -105,9 +108,11 @@ const Code = ({ link, size = 28 } : { link: string; size?: number }) => (
         className="inline-flex"
         style={{ width: size, height: size }}
     >
-        <img
-            src={code.src}
+        <Image
+            src={code}
             alt="Code"
+            width={size}
+            height={size}
             className="w-full h-full object-cover block bg-transparent radius-[4px]"
         />
     </a>
@@ -122,9 +127,11 @@ const Document = ({ link, size = 28 } : { link: string; size?: number }) => (
         className="inline-flex"
         style={{ width: size, height: size }}
     >
-        <img
-            src={document.src}
+        <Image
+            src={document}
             alt="Document"
+            width={size}
+            height={size}
             className="w-full h-full object-cover block bg-transparent radius-[4px]"
         />
     </a>

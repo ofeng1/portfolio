@@ -1,12 +1,12 @@
 "use client";
 
 import { forwardRef } from "react";
-import { motion } from "framer-motion";
+import { motion, type MotionValue } from "framer-motion";
 import Signature from "./Signature";
 import image4 from "../images_and_whatnot/IMG_1059.jpg";
 
 type HomeProps = {
-  progress: any;
+  progress: MotionValue<number>;
 };
 
 const Home = forwardRef<HTMLElement, HomeProps>(function Home(_props, ref) {

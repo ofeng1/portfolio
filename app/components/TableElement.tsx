@@ -1,14 +1,13 @@
 "use client";
 
 type TableElProps = {
-    key: number;
     title: string;
     description: string;
     isFirst?: boolean;
     isLast?: boolean;
 }
 
-export default function TableElement({key, title, description, isFirst, isLast}: TableElProps) {
+export default function TableElement({ title, description, isFirst, isLast}: TableElProps) {
     return(
         <li className={`table__row${isLast ? " table__row--last" : ""}`} tabIndex={0}>
             <h3 className="table__title">{title}</h3>

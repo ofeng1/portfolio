@@ -5,7 +5,6 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import AboutFilled from "../../images_and_whatnot/fill_text.svg";
 import AboutOutline from "../../images_and_whatnot/no_fill_text.svg";
 import Table from "../Table";
-import { table } from "console";
 
 type ZoomEffectProps = {
     text: string;
@@ -73,7 +72,7 @@ export default function ZoomEffect({text, children}: ZoomEffectProps) {
                 style={{ y: tableY }}
             >
                 <Table/>
-            </motion.div>`
+            </motion.div>
         </section>
     );
 

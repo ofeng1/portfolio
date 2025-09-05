@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import {
   motion,
   useScroll,
   useTransform, 
-  useMotionValueEvent,
   type MotionValue
 } from "framer-motion";
+import Image from "next/image";
 
 type LayoutGridProps = {
     cards: Card[];
@@ -103,11 +103,12 @@ function GridCard({ card, index, total, progress } : GridCardProps) {
             shadow-[0_1px_2px_rgba(0,0,0,0.06),0_8px_24px_rgba(0,0,0,0.5)]
             "   
         >
-          <div className="relative rounded-xl overflow-hidden shrink-0">
-            <img
+          <div className="relative rounded-xl overflow-hidden shrink-0 aspect-[16/10]">
+            <Image
               src={card.thumbnail}
               alt=""
-              className="w-full aspect-[16/10] object-cover block"
+              fill
+              className="object-cover block"
             />
             <div
               aria-hidden
