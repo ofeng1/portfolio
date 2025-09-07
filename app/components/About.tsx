@@ -1,11 +1,11 @@
 "use client";
 
-import image11 from "../images_and_whatnot/IMG_1062_2.jpg"
+import image11 from "../../public/images/IMG_1062_2.jpg"
 import ZoomEffect from "./effects/ZoomEffect"
 
 export default function About() {
     return(
-        <section className="h-[300vh] z-20 bg-white w-full items-center flex flex-col">
+        <section className="h-[500vh] z-20 bg-white w-full items-center flex flex-col">
             <ZoomEffect text="what's this guy all...">
                 <div
                     style={{

@@ -22,7 +22,11 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
+}
+
+.font-geist-mono {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 
@@ -43,6 +47,21 @@ body {
   width: 100%;
   text-decoration: none;
   color: inherit;
+}
+
+html, body {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+
+.scrollable-element {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.scrollable-element::-webkit-scrollbar {
+  display: none; 
+
 }
 
 .table__row {

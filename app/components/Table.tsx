@@ -3,10 +3,6 @@
 import TableElement from "./TableElement";
 import {useState} from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import resume_img from "../images_and_whatnot/resume_img.png";
-import ucsb_img from "../images_and_whatnot/ucsb_img.png";
-import vannevar_img from "../images_and_whatnot/vannevar_img.png";
-import sonnet_img from "../images_and_whatnot/sonnet_ai_img.png";
 import Carousel from "./Carousel";
 
 const rows = [
@@ -30,7 +26,7 @@ const rows = [
         children: (
             <div className="flex flex-col gap-[1rem] w-[80%] mx-auto text-left">
                 <img 
-                    src={ucsb_img.src}
+                    src="/images/ucsb_img.png"
                     alt="UCSB Logo"
                     className="self-center w-[180px] bg-white rounded-full"
                 />
@@ -103,7 +99,7 @@ const rows = [
                         }}
                     >
                         <img 
-                            src={sonnet_img.src} 
+                            src="/images/sonnet_ai_img.png" 
                             alt="Sonnet AI"
                             style={{
                                 width: 120,
@@ -147,7 +143,7 @@ const rows = [
                         }}
                     >
                         <img 
-                            src={vannevar_img.src} 
+                            src="/images/vannevar_img.png" 
                             alt="Vannevar Labs"
                             className="w-[120px]"
                         />
@@ -172,7 +168,7 @@ const rows = [
         children: (
             <div className="flex flex-col gap-[1rem] items-center justify-center width-full">
                 <img 
-                    src={resume_img.src} 
+                    src="/images/resume_img.png" 
                     alt="Resume thumbnail"
                     className="w-[400px] h-auto"
                 />

@@ -35,7 +35,7 @@ export default function Signature({ text, image }: { text: string; image?: strin
                 "
             />
             <SlideEffect pathLength={pathLengthMotion} opacity={opacityMotion} />
-            <h1 className="font-[Inter] text-white text-[clamp(3rem,10vw,6rem)] mt-6">{text}</h1>
+            <h1 className="font-[Inter] [font-weight:700] text-4xl text-white text-[clamp(3rem,10vw,6rem)] mt-6">{text}</h1>
         </div>
     </div>
   );

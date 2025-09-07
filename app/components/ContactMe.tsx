@@ -4,17 +4,17 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import HorizontalEffect from "./effects/HorizontalEffect";
 
-import ContactEmail from "../images_and_whatnot/contact_email.svg";
-import ContactPhone from "../images_and_whatnot/contact_phone.svg";
-import ContactLinkedin from "../images_and_whatnot/contact_linkedin.svg";
-import Owen from "../images_and_whatnot/contact_owen.svg";
+import ContactEmail from "../../public/images/contact_email.svg";
+import ContactPhone from "../../public/images/contact_phone.svg";
+import ContactLinkedin from "../../public/images/contact_linkedin.svg";
+import Owen from "../../public/images/contact_owen.svg";
 
 // import image1 from "../images_and_whatnot/IMG_9127.JPG";
 // import image2 from "../images_and_whatnot/IMG_6943.JPG";
-import image3 from "../images_and_whatnot/IMG_1756.jpg";
-import image4 from "../images_and_whatnot/IMG_0992.jpg";
+import image3 from "../../public/images/IMG_1756.jpg";
+import image4 from "../../public/images/IMG_0992.jpg";
 // import image5 from "../images_and_whatnot/IMG_7151.JPG";
-import image6 from "../images_and_whatnot/IMG_6746.jpg";
+import image6 from "../../public/images/IMG_6746.jpg";
 // import image7 from "../images_and_whatnot/IMG_1466.HEIC";
 // import image8 from "../images_and_whatnot/IMG_0795.HEIC";
 // import image9 from "../images_and_whatnot/IMG_9526.JPG";

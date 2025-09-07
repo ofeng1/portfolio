@@ -3,7 +3,7 @@
 import { forwardRef } from "react";
 import { motion, type MotionValue } from "framer-motion";
 import Signature from "./Signature";
-import image4 from "../images_and_whatnot/IMG_1059.jpg";
+import image4 from "../../public/images/IMG_1059.jpg";
 
 type HomeProps = {
   progress: MotionValue<number>;

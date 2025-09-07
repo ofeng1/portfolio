@@ -1,23 +1,23 @@
 "use client";
 
 import {motion} from 'framer-motion';
-import py_img from "../images_and_whatnot/python.png";
-import r_img from "../images_and_whatnot/R_logo.png";
-import js_img from "../images_and_whatnot/logo-javascript-logo.png";
-import sql_img from "../images_and_whatnot/sql_img.png"
-import react_img from "../images_and_whatnot/react_img.png"
-import ts_img from "../images_and_whatnot/ts_img.png";
-import c_plus_plus_img from "../images_and_whatnot/C++.png";
-import github_img from "../images_and_whatnot/github_img.png";
-import aws_img from "../images_and_whatnot/aws_img.png";
-import docker_img from "../images_and_whatnot/docker_img.webp";
-import java_img from "../images_and_whatnot/java_img.png";
-import dj_img from "../images_and_whatnot/dj_img.png";
-import pytorch_img from "../images_and_whatnot/pytorch_img.png";
-import njs_img from "../images_and_whatnot/njs_img.gif";
-import rust_img from "../images_and_whatnot/rust_img.png";
-import go_img from "../images_and_whatnot/go_img.png";
-import lua_img from "../images_and_whatnot/lua_img.png";
+import py_img from "../../public/images/python.png";
+import r_img from "../../public/images/R_logo.png";
+import js_img from "../../public/images/logo-javascript-logo.png";
+import sql_img from "../../public/images/sql_img.png"
+import react_img from "../../public/images/react_img.png"
+import ts_img from "../../public/images/ts_img.png";
+import c_plus_plus_img from "../../public/images/C++.png";
+import github_img from "../../public/images/github_img.png";
+import aws_img from "../../public/images/aws_img.png";
+import docker_img from "../../public/images/docker_img.webp";
+import java_img from "../../public/images/java_img.png";
+import dj_img from "../../public/images/dj_img.png";
+import pytorch_img from "../../public/images/pytorch_img.png";
+import njs_img from "../../public/images/njs_img.gif";
+import rust_img from "../../public/images/rust_img.png";
+import go_img from "../../public/images/go_img.png";
+import lua_img from "../../public/images/lua_img.png";
 
 export default function Carousel() {
     return (
