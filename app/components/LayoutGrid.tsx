@@ -9,7 +9,6 @@ import {
   type MotionValue,
   useMotionValueEvent
 } from "framer-motion";
-import Image from "next/image";
 import { Github, Code, Document } from "./LinkIcons";
 
 type LayoutGridProps = {
@@ -48,6 +47,12 @@ export default function LayoutGrid({ cards, progress: progressProp, sectionHeigh
         target: ref,
         offset: ["start start", "end start"],
     })
+
+    useMotionValueEvent(scrollYProgress, "change", (v) => {
+      if (v > 0.0001) {
+        setHoveredCard(null);
+      }
+    });
 
     useMotionValueEvent(scrollYProgress, "change", (v) => {
       if (v > 0.0001) {

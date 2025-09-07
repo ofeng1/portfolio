@@ -13,7 +13,7 @@ const rows = [
         children: (
             <div className="flex flex-col items-center gap-[1rem] max-w-[500px] text-left">
                 <video className="w-[460px]" autoPlay loop muted playsInline preload="metadata">
-                    <source src="/about_me.mp4" type="video/mp4" />
+                    <source src="/images/about_me.mp4" type="video/mp4" />
                 </video>
                 <p className="text-white font-[Inter] text-[100%] font-light">I&apos;m <b>Owen Feng</b>, an engineer passionate about the fields of <b>finance</b>, <b>software</b>, and <b>AI</b>. I enjoy working on all kinds of projects in these areas, whether it’s building predictive models, creating scalable systems, or designing simple apps people enjoy using. I’ve worked in startups, led data science projects, and spent plenty of time hands-on with code, always aiming to make complex ideas easy to understand and use.</p>
             </div>

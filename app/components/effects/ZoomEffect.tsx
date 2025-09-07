@@ -24,18 +24,18 @@ export default function ZoomEffect({text, children}: ZoomEffectProps) {
 
     const textFade = useTransform(scrollYProgress, [0, 0.01], [1, 0]);
 
-    const fillFade  = useTransform(scrollYProgress,   [0.01, 0.03, 0.06, 0.15],  [0, 1, 1, 0]);
+    const fillFade  = useTransform(scrollYProgress,   [0.01, 0.03, 0.09, 0.15],  [0, 1, 1, 0]);
     const aboutFade = useTransform(scrollYProgress, [0.01, 0.03], [0, 1]);
 
-    const imgFade = useTransform(scrollYProgress, [0.07, 0.1, 0.95, 1], [0, 1, 1, 0]);
-    const scale = useTransform(scrollYProgress, [0, 0.07, 0.55], [4, 4, 900]);
-    const panY = useTransform(scrollYProgress, [0.07, 0.55], [0, -2000]);
-    const panX = useTransform(scrollYProgress, [0.07, 0.55], [0, 300]);
+    const imgFade = useTransform(scrollYProgress, [0.09, 0.1, 0.95, 1], [0, 1, 1, 0]);
+    const scale = useTransform(scrollYProgress, [0, 0.08, 0.65], [4, 4, 900]);
+    const panY = useTransform(scrollYProgress, [0.08, 0.55], [0, -2000]);
+    const panX = useTransform(scrollYProgress, [0.08, 0.55], [0, 300]);
     const imgY = useTransform(scrollYProgress, [0.13, 1], [100, -50]);
 
-    const tableY = useTransform(scrollYProgress, [0, 0.95, 1], ["110vh", "110vh", "90vh"]);
+    const tableY = useTransform(scrollYProgress, [0, 0.95, 1], ["110vh", "110vh", "100vh"]);
 
-    const blackOut = useTransform(scrollYProgress, [0.8, 1], ["rgba(0,0,0,0)", "rgba(0,0,0,1)"]);
+    const blackOut = useTransform(scrollYProgress, [0.6, 1], ["rgba(0,0,0,0)", "rgba(0,0,0,1)"]);
 
     return (
         <section ref={ref} style={{ height: "500vh" }} className="relative">
@@ -74,7 +74,7 @@ export default function ZoomEffect({text, children}: ZoomEffectProps) {
             </motion.div>
             <div id="about" data-offset="4500"/>
             <motion.div
-                className="relative z-50 h-screen pointer-events-auto"
+                className="relative z-50 h-screen pointer-events-auto bottom-0"
                 style={{ y: tableY }}
             >
                 <Table/>
