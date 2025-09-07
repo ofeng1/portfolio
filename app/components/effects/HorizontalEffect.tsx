@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React from "react";
-import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
+import React from 'react';
+import { motion, useScroll, useTransform, type MotionValue } from 'framer-motion';
 
 type HeroImage = {
   src: string;
@@ -28,11 +28,11 @@ export default function HorizontalEffect({
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end end"],
+    offset: ['start end', 'end end'],
   });
 
-  const x = useTransform(scrollYProgress, [delay, 1], ["100vw", "-300vw"]);
-  const carouselX = useTransform(scrollYProgress, [delay, 1 - 0.08], ["100vw", "-300vw"]);
+  const x = useTransform(scrollYProgress, [delay, 1], ['100vw', '-300vw']);
+  const carouselX = useTransform(scrollYProgress, [delay, 1 - 0.08], ['100vw', '-300vw']);
 
   return (
     <section
@@ -85,7 +85,7 @@ function ImageReveal({
   const start = Math.max(0, 0.2 + index * step);
   const end = start + step * 0.5;
 
-  const imgX = useTransform(scrollYProgress, [start, end], ["-110%", "0%"]);
+  const imgX = useTransform(scrollYProgress, [start, end], ['-110%', '0%']);
 
   return (
     <div
@@ -95,12 +95,12 @@ function ImageReveal({
         left: `calc(${index * 22}vw + 80vw)`,
         width: image.width,
         height: image.height,
-        overflow: "hidden",
+        overflow: 'hidden',
       }}
     >
       <motion.img
         src={image.src}
-        alt={image.alt ?? ""}
+        alt={image.alt ?? ''}
         className="block h-full w-full object-cover will-change-transform"
         style={{ x: imgX }}
       />

@@ -1,21 +1,20 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
-    ],
+    formats: ['image/avif', 'image/webp'],
+    remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
   },
   webpack(config) {
     const assetRule = config.module.rules.find(
-      (rule: any) => rule && typeof rule === "object" && rule.test?.test?.(".svg")  // eslint-disable-line @typescript-eslint/no-explicit-any
+      (rule: any) => rule && typeof rule === 'object' && rule.test?.test?.('.svg'), // eslint-disable-line @typescript-eslint/no-explicit-any
     );
     if (assetRule) assetRule.exclude = /\.svg$/i;
 
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
-      use: [{ loader: "@svgr/webpack", options: { svgo: true } }],
+      use: [{ loader: '@svgr/webpack', options: { svgo: true } }],
     });
 
     return config;
