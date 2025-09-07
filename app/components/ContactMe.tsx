@@ -9,15 +9,9 @@ import ContactPhone from "../../public/images/contact_phone.svg";
 import ContactLinkedin from "../../public/images/contact_linkedin.svg";
 import Owen from "../../public/images/contact_owen.svg";
 
-// import image1 from "../images_and_whatnot/IMG_9127.JPG";
-// import image2 from "../images_and_whatnot/IMG_6943.JPG";
-import image3 from "../../public/images/IMG_1756.jpg";
-import image4 from "../../public/images/IMG_0992.jpg";
-// import image5 from "../images_and_whatnot/IMG_7151.JPG";
-import image6 from "../../public/images/IMG_6746.jpg";
-// import image7 from "../images_and_whatnot/IMG_1466.HEIC";
-// import image8 from "../images_and_whatnot/IMG_0795.HEIC";
-// import image9 from "../images_and_whatnot/IMG_9526.JPG";
+// Use direct public URLs to avoid TypeScript module resolution for non-standard extensions
+// and reduce bundle size.
+
 
 type Ring = {
   key: number;
@@ -83,15 +77,15 @@ function ContactMe() {
   const text = "Contact Me";
 
   const heroImages: HeroImage[] = [
-    // { src: image1, width: 200, height: 300 },
-    // { src: image2, width: 200, height: 200 },
-    { src: image3.src, width: 300, height: 200 },
-    { src: image6.src, width: 150, height: 250 },
-    // { src: image5, width: 200, height: 200 },
-    { src: image4.src, width: 300, height: 200 },
-    // { src: image7, width: 200, height: 300 },
-    // { src: image8, width: 200, height: 200 },
-    // { src: image9, width: 300, height: 200 },
+    { src: "/images/IMG_1756.jpg", width: 300, height: 200 },
+    { src: "/images/IMG_6746.jpg", width: 150, height: 250 },
+    { src: "/images/IMG_0992.jpg", width: 300, height: 200 },
+    { src: "/images/IMG_9127.JPG", width: 200, height: 300 },
+    { src: "/images/IMG_6943.JPG", width: 200, height: 200 },
+    { src: "/images/IMG_7151.JPG", width: 200, height: 200 },
+    { src: "/images/IMG_1466.HEIC", width: 200, height: 300 },
+    { src: "/images/IMG_0795.HEIC", width: 200, height: 200 },
+    { src: "/images/IMG_9526.JPG", width: 300, height: 200 },
   ];
 
   const handleClick = () => {
