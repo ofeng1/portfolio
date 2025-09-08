@@ -45,8 +45,8 @@ export default function App() {
   ) : (
     <div className="bg-black flex justify-center items-center h-screen">
       <h1 className="text-white [font-family:Inter] text-3xl text-center px-3">
-        Sorry, this website is not yet optimized for this screen size! Please use a desktop browser
-        to view this website.
+        Sorry, this website is not yet optimized for mobile! Please use a desktop browser to view
+        this website.
       </h1>
     </div>
   );

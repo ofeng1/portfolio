@@ -226,25 +226,8 @@ const rows = [
     id: 4,
     link: '/pdfs/OwenFeng_resume-3.pdf',
     children: (
-      <div className="flex flex-col items-center justify-center w-full gap-2 sm:gap-3 md:gap-4 px-0">
-        <img
-          src="/images/resume_img.png"
-          alt="Resume thumbnail"
-          //   className="
-          //     w-[80vw]
-          //     sm:w-[65vw]
-          //     md:w-[50vw]
-          //     lg:w-[40vw]
-          //     xl:w-[32vw]
-          //     max-w-[700px]
-          //     h-auto
-          //     object-contain
-          //     transition-all
-          //     duration-200
-          //     ease-in-out
-          //   "
-          style={{ aspectRatio: '3 / 4' }}
-        />
+      <div className="flex flex-col items-center justify-center w-[95%] gap-2 sm:gap-3 md:gap-4 px-0">
+        <img src="/images/resume_img.png" alt="Resume thumbnail" style={{ aspectRatio: '3 / 4' }} />
       </div>
     ),
   },
