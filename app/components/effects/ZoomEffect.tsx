@@ -24,12 +24,12 @@ export default function ZoomEffect({ text, children, targetRef }: ZoomEffectProp
   const aboutFade = useTransform(scrollYProgress, [0.01, 0.03], [0, 1]);
 
   const imgFade = useTransform(scrollYProgress, [0.09, 0.1, 0.95, 1], [0, 1, 1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.08, 0.65], [4, 4, 900]);
-  const panY = useTransform(scrollYProgress, [0.08, 0.55], [0, -2000]);
-  const panX = useTransform(scrollYProgress, [0.08, 0.55], [0, 300]);
+  const scale = useTransform(scrollYProgress, [0, 0.08, 0.85], [3, 3, 900]);
+  const panY = useTransform(scrollYProgress, [0.08, 0.85], [0, -2000]);
+  const panX = useTransform(scrollYProgress, [0.08, 0.85], [0, 300]);
   const imgY = useTransform(scrollYProgress, [0.13, 1], [50, -50]);
 
-  const tableY = useTransform(scrollYProgress, [0.99, 1], ['200vh', '100vh']);
+  const tableY = useTransform(scrollYProgress, [0.85, 0.95], ['450vh', '200vh']);
   const blackOut = useTransform(scrollYProgress, [0.6, 1], ['rgba(0,0,0,0)', 'rgba(0,0,0,1)']);
 
   return (
@@ -68,8 +68,8 @@ export default function ZoomEffect({ text, children, targetRef }: ZoomEffectProp
       </motion.div>
       <div id="about" data-offset="4500" />
       <motion.div
-        className="relative z-50 h-screen pointer-events-auto bottom-0"
-        style={{ y: tableY }}
+        className="relative z-50 h-screen pointer-events-auto"
+        style={{ y: tableY, willChange: 'transform, opacity' }}
       >
         <Table />
       </motion.div>
