@@ -46,6 +46,7 @@ export default function LayoutGrid({
 }: LayoutGridProps) {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const ref = useRef<HTMLElement | null>(null);
+  const [pct, setPct] = useState(0);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -53,16 +54,15 @@ export default function LayoutGrid({
   });
 
   useMotionValueEvent(scrollYProgress, 'change', (v) => {
+    setPct(Math.round(v * 100));
     if (v > 0.0001) {
       setHoveredCard(null);
     }
   });
 
-  useMotionValueEvent(scrollYProgress, 'change', (v) => {
-    if (v > 0.0001) {
-      setHoveredCard(null);
-    }
-  });
+  useEffect(() => {
+    setPct(Math.round((scrollYProgress.get() ?? 0) * 100));
+  }, [scrollYProgress]);
 
   const progress = progressProp ?? scrollYProgress;
   const fastProgress = useTransform(progress, (v) => Math.min(1, v * 1.6));
@@ -102,7 +102,7 @@ export default function LayoutGrid({
               progress={progress}
               total={total}
               hoveredCard={hoveredCard}
-              setHoveredCard={setHoveredCard}
+              setHoveredCard={pct >= 88 ? () => setHoveredCard(null) : setHoveredCard}
             />
           );
         })}
@@ -148,7 +148,7 @@ function GridCard({ card, index, total, progress, hoveredCard, setHoveredCard }:
       style={{
         y: ySpring,
         willChange: 'transform, opacity',
-        zIndex: hoveredCard === card.id ? 20 : 5,
+        zIndex: 20,
         backgroundImage: `url(${card.thumbnail})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -161,8 +161,8 @@ function GridCard({ card, index, total, progress, hoveredCard, setHoveredCard }:
             relative bg-white w-[25%] h-[75%] transform-gpu object-cover p-[1rem]
             "
       whileHover={{
-        scale: 1.02,
-        cursor: 'pointer',
+        scale: hoveredCard === card.id ? 1.02 : 1,
+        cursor: hoveredCard === card.id ? 'pointer' : 'default',
       }}
       onHoverStart={() => handleHover(card.id)}
       onHoverEnd={handleLeave}
