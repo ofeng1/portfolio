@@ -70,39 +70,37 @@ function Projects() {
   const gradientHeight = useSpring(gradientHeightRaw, { stiffness: 140, damping: 22, mass: 0.6 });
 
   return (
-    <>
-      <section
-        className="relative z-30 bg-black w-full"
-        style={{
-          height: SECTION_HEIGHT,
-        }}
-        id="projects"
-        ref={ref}
-        data-offset="500"
-      >
-        <div className="flex items-center justify-center sticky top-0 w-full h-screen z-5">
-          <motion.h1
-            className="font-[Inter] text-[24vw] [font-weight:700] text-center leading-none"
-            style={{
-              color,
-            }}
-          >
-            Projects
-          </motion.h1>
-        </div>
-        <LayoutGrid cards={cards} progress={scrollYProgress} sectionHeight={'800vh'} />
-        <motion.div
-          aria-hidden="true"
-          className="absolute bottom-0 left-0 w-full pointer-events-none z-2"
-          style={{ height: gradientHeight }}
+    <section
+      className="relative z-30 bg-black w-full"
+      style={{
+        height: SECTION_HEIGHT,
+      }}
+      id="projects"
+      ref={ref}
+      data-offset="500"
+    >
+      <div className="flex items-center justify-center sticky top-0 w-full h-screen z-5">
+        <motion.h1
+          className="font-[Inter] text-[24vw] [font-weight:700] text-center leading-none"
+          style={{
+            color,
+          }}
         >
-          <div
-            className="w-full h-full bg-gradient-to-b from-[#FF4F00] to-transparent
+          Projects
+        </motion.h1>
+      </div>
+      <LayoutGrid cards={cards} progress={scrollYProgress} sectionHeight={'800vh'} />
+      <motion.div
+        aria-hidden="true"
+        className="absolute bottom-0 left-0 w-full pointer-events-none z-2"
+        style={{ height: gradientHeight }}
+      >
+        <div
+          className="w-full h-full bg-gradient-to-b from-[#FF4F00] to-transparent
                         supports-[background:linear-gradient(in_oklch,_transparent,_#FF4F00)]:bg-[linear-gradient(in_oklch,_transparent_0%,_#FF4F00_100%)]"
-          />
-        </motion.div>
-      </section>
-    </>
+        />
+      </motion.div>
+    </section>
   );
 }
 

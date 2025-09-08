@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
 import { motion, useTransform, useScroll } from 'framer-motion';
 import AboutFilled from '../../../public/images/fill_text.svg';
 import AboutOutline from '../../../public/images/no_fill_text.svg';
@@ -9,14 +9,12 @@ import Table from '../Table';
 type ZoomEffectProps = {
   text: string;
   children?: React.ReactNode;
+  targetRef: React.RefObject<HTMLElement | null>;
 };
 
-export default function ZoomEffect({ text, children }: ZoomEffectProps) {
-  const ref = useRef<HTMLElement | null>(null);
-  const stateRef = useRef<HTMLDivElement | null>(null);
-
+export default function ZoomEffect({ text, children, targetRef }: ZoomEffectProps) {
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: targetRef,
     offset: ['start start', 'end end'],
   });
 
@@ -32,11 +30,10 @@ export default function ZoomEffect({ text, children }: ZoomEffectProps) {
   const imgY = useTransform(scrollYProgress, [0.13, 1], [50, -50]);
 
   const tableY = useTransform(scrollYProgress, [0.99, 1], ['200vh', '100vh']);
-
   const blackOut = useTransform(scrollYProgress, [0.6, 1], ['rgba(0,0,0,0)', 'rgba(0,0,0,1)']);
 
   return (
-    <section ref={ref} style={{ height: '800vh' }} className="relative">
+    <>
       <motion.div
         className="sticky top-0 z-10 w-screen h-screen overflow-hidden m-0 flex flex-col items-center justify-center pointer-events-none"
         style={{ backgroundColor: blackOut, willChange: 'background-color' }}
@@ -76,6 +73,6 @@ export default function ZoomEffect({ text, children }: ZoomEffectProps) {
       >
         <Table />
       </motion.div>
-    </section>
+    </>
   );
 }

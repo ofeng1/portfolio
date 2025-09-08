@@ -21,7 +21,7 @@ import lua_img from '../../public/images/lua_img.png';
 
 export default function Carousel() {
   return (
-    <div className="w-[80%] flex">
+    <div className="w-full flex items-center justify-center">
       <motion.div
         variants={{
           hidden: { opacity: 0 },
@@ -34,11 +34,13 @@ export default function Carousel() {
         initial="hidden"
         animate="visible"
         exit="exit"
-        className="relative w-[140px] aspect-square flex items-center justify-center my-8 mx-4"
+        className="relative aspect-square flex items-center justify-center my-6 sm:my-8 mx-2 sm:mx-4"
+        style={{ width: 'min(36vw, 220px)' }}
       >
         <motion.img
           src={py_img.src}
-          className="w-[100px] h-[100px] object-cover rounded-full"
+          className="object-cover rounded-full"
+          style={{ width: 'min(22vw, 100px)', height: 'min(22vw, 100px)' }}
           variants={{
             hidden: { scale: 0, opacity: 0 },
             visible: {
@@ -50,8 +52,8 @@ export default function Carousel() {
         />
         <Circle
           images={[r_img.src, sql_img.src, react_img.src, ts_img.src, go_img.src, js_img.src]}
-          radius={110}
-          size={70}
+          radius={90}
+          size={56}
         />
         <Circle
           images={[
@@ -66,8 +68,8 @@ export default function Carousel() {
             lua_img.src,
             rust_img.src,
           ]}
-          radius={200}
-          size={50}
+          radius={160}
+          size={42}
         />
       </motion.div>
     </div>
