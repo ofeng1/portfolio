@@ -197,7 +197,7 @@ function GridCard({ card, index, total, progress, hoveredCard, setHoveredCard }:
                   transition: { type: 'spring', stiffness: 500, damping: 30, delay: 0.05 },
                 },
               }}
-              className="text-[rgb(222,222,222)] text-xs md:text-sm font-geist-mono [font-weight:500] leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
+              className="text-[rgb(223, 223, 223)] text-xs md:text-sm font-geist-mono [font-weight:500] leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
             >
               {card.paragraph}
             </motion.p>

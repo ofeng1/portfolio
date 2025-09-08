@@ -9,19 +9,31 @@ import Projects from './components/Projects';
 import ContactMe from './components/ContactMe';
 
 export default function App() {
-  const homeRef = useRef<HTMLElement | null>(null);
+  const homeRef = useRef<HTMLDivElement | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
   const { scrollYProgress } = useScroll({
-    target: homeRef,
+    target: isMobile ? undefined : homeRef,
     offset: ['end 105%', 'end start'],
   });
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 768);
+    let prev = window.innerWidth < 1000;
+    const onResize = () => {
+      const m = window.innerWidth < 1000;
+      if (prev && !m) {
+        scrollYProgress.set(0);
+        window.scrollTo({ top: 0, behavior: 'auto' });
+      }
+      prev = m;
+      setIsMobile(m);
+    };
+    onResize();
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
   }, []);
 
-  return isMobile ? (
+  return !isMobile ? (
     <div className="flex-col items-center content-center h-auto">
       <div id="home" />
       <Home ref={homeRef} progress={scrollYProgress} />
@@ -31,10 +43,10 @@ export default function App() {
       <ContactMe />
     </div>
   ) : (
-    <div className="bg-black">
-      <h1 className="text-white [font-family:Inter]">
-        Sorry, this website is not yet optimized for mobile devices! Please use a desktop browser to
-        view this website.
+    <div className="bg-black flex justify-center items-center h-screen">
+      <h1 className="text-white [font-family:Inter] text-3xl text-center px-3">
+        Sorry, this website is not yet optimized for this screen size! Please use a desktop browser
+        to view this website.
       </h1>
     </div>
   );

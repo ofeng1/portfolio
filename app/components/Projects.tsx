@@ -19,9 +19,8 @@ const cards = [
     title: 'Analysis of the Bloom Filter Data Structure',
     paragraph:
       'A concise explainer of how bloom filters encode set membership, why they permit false positives, and how hash count governs the accuracy–memory trade-off.',
-    code: 'https://github.com/Shashin-Gupta/DSCollaborativeProject',
-    document:
-      'https://docs.google.com/presentation/d/1YSQD0Rb6j7T8PBjOzoOuOWqWq9zqxMcsqF4G7bL5010/edit?usp=sharing',
+    code: 'https://colab.research.google.com/drive/1UoN4gan5UPYHT7LlRlHoAijAUVYwZmJ5?usp=sharing',
+    document: '/pdfs/CS 130A -2.pdf',
   },
   {
     id: 3,

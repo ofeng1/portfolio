@@ -11,25 +11,45 @@ const rows = [
     description: 'NICE TO MEET YOU!',
     id: 0,
     children: (
-      <div className="flex flex-col items-center gap-3 w-full max-w-[520px] px-2 sm:px-3 text-left">
-        <video
-          className="w-[55vw] max-w-[340px] min-w-[200px] aspect-video rounded-md"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-        >
-          <source src="/images/about_me.mp4" type="video/mp4" />
-        </video>
-        <p className="text-white font-[Inter] text-[95%] sm:text-[100%] font-light break-words">
-          I&apos;m <b>Owen Feng</b>, an engineer passionate about the fields of <b>finance</b>,{' '}
-          <b>software</b>, and <b>AI</b>. I enjoy working on all kinds of projects in these areas,
-          whether it’s building predictive models, creating scalable systems, or designing simple
-          apps people enjoy using. I’ve worked in startups, led data science projects, and spent
-          plenty of time hands-on with code, always aiming to make complex ideas easy to understand
-          and use.
-        </p>
+      <div className="relative flex flex-col items-center w-full px-2 sm:px-3 text-left gap-1">
+        <div className="w-full flex justify-center mb-8">
+          <video
+            className="
+              relative
+              w-[70vw] 
+              sm:w-[50vw] 
+              md:w-[40vw] 
+              lg:w-[32vw]
+              max-w-[350px]
+              min-w-[180px]
+              aspect-video
+              object-cover
+              rounded-md
+              z-0
+              shadow-lg
+              border border-white/10
+              transition-all
+              duration-300
+            "
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+          >
+            <source src="/images/about_me.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="relative z-10 w-full flex flex-col items-center max-w-[340px] min-w-[200px]">
+          <p className="text-white font-[Inter] font-light break-words text-[clamp(0.95rem,2.5vw,1.05rem)]">
+            I&apos;m <b>Owen Feng</b>, an engineer passionate about the fields of <b>finance</b>,{' '}
+            <b>software</b>, and <b>AI</b>. I enjoy working on all kinds of projects in these areas,
+            whether it’s building predictive models, creating scalable systems, or designing simple
+            apps people enjoy using. I’ve worked in startups, led data science projects, and spent
+            plenty of time hands-on with code, always aiming to make complex ideas easy to
+            understand and use.
+          </p>
+        </div>
       </div>
     ),
   },
@@ -38,22 +58,22 @@ const rows = [
     description: 'MY SCHOOL + RELEVANT STATS',
     id: 1,
     children: (
-      <div className="flex flex-col gap-4 w-full max-w-[500px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[500px] mx-auto text-left px-2 sm:px-4">
+      <div className="flex flex-col w-full mx-auto text-left gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 px-1 sm:px-2 md:px-3 max-w-[90%] sm:max-w-[420px] md:max-w-[420px] lg:max-w-[480px] xl:max-w-[500px]">
         <img
           src="/images/ucsb_img.png"
           alt="UCSB Logo"
-          className="self-center w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] bg-white rounded-full"
+          className="self-center w-[90px] sm:w-[110px] md:w-[130px] lg:w-[150px] xl:w-[170px] bg-white rounded-full"
         />
-        <p className="text-white font-[Inter] text-[95%] sm:text-[100%] font-light">
+        <p className="text-white font-[Inter] font-light leading-snug text-[0.95rem] sm:text-[0.98rem] md:text-[1rem] lg:text-[1.05rem]">
           <b>🏫 Name:</b> University of California, Santa Barbara
         </p>
-        <p className="text-white font-[Inter] text-[95%] sm:text-[100%] font-light">
+        <p className="text-white font-[Inter] font-light leading-snug text-[0.95rem] sm:text-[0.98rem] md:text-[1rem] lg:text-[1.05rem]">
           <b>✏️ Major:</b> Statistics and Data Science
         </p>
-        <p className="text-white font-[Inter] text-[95%] sm:text-[100%] font-light">
+        <p className="text-white font-[Inter] font-light leading-snug text-[0.95rem] sm:text-[0.98rem] md:text-[1rem] lg:text-[1.05rem]">
           <b>👨‍🎓 GPA:</b> 3.80 / 4.00
         </p>
-        <p className="text-white font-[Inter] text-[90%] sm:text-[100%] font-light break-words">
+        <p className="text-white font-[Inter] font-light break-words leading-snug text-[0.9rem] sm:text-[0.95rem] md:text-[0.98rem] lg:text-[1.02rem]">
           <b>📚 Courses:</b> Linear Algebra, Differential Equations, Vector Calculus, Data Science
           Principles, Intermediate Python, Rigorous Proofs (Higher Math), Adv. Linear Algebra,
           Probability and Statistics, SAS Base Programming, Data Structures, Design of Experiments,
@@ -204,14 +224,26 @@ const rows = [
     description: 'GRAB A COPY ON YOUR WAY OUT!',
     alt_description: 'CLICK HERE TO DOWNLOAD',
     id: 4,
-    link: '/assets/OwenFeng_resume-3.pdf',
+    link: '/pdfs/OwenFeng_resume-3.pdf',
     children: (
       <div className="flex flex-col items-center justify-center w-full gap-2 sm:gap-3 md:gap-4 px-0">
         <img
           src="/images/resume_img.png"
           alt="Resume thumbnail"
-          className="w-[55vw] sm:w-[50vw] md:w-[40vw] lg:w-[32vw] max-w-[400px] min-w-[180px] h-auto object-contain"
-          style={{ aspectRatio: '4 / 3' }}
+          //   className="
+          //     w-[80vw]
+          //     sm:w-[65vw]
+          //     md:w-[50vw]
+          //     lg:w-[40vw]
+          //     xl:w-[32vw]
+          //     max-w-[700px]
+          //     h-auto
+          //     object-contain
+          //     transition-all
+          //     duration-200
+          //     ease-in-out
+          //   "
+          style={{ aspectRatio: '3 / 4' }}
         />
       </div>
     ),
