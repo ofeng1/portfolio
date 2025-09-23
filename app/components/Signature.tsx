@@ -18,11 +18,11 @@ export default function Signature({ text, image }: { text: string; image?: strin
     offset: ['start start', 'end start'],
   });
 
-  const pathLengthMotion: MotionValue<number> = useTransform(scrollYProgress, [0, 1], [0, 0.68]);
+  const pathLengthMotion: MotionValue<number> = useTransform(scrollYProgress, [0, 1], [0, 0.57]);
   const opacityMotion: MotionValue<number> = useTransform(scrollYProgress, [0, 0.05], [0, 1]);
 
   return (
-    <div ref={ref} className="h-[300vh]">
+    <div ref={ref} className="h-[500vh]">
       <div
         className="sticky top-0 h-screen flex items-center justify-center flex-col z-[10]"
         style={{

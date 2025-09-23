@@ -25,8 +25,10 @@ const cards = [
   {
     id: 3,
     thumbnail: '/images/tbd.png',
-    title: 'Forecasting on Federal Unemployment Rates',
-    paragraph: '',
+    title: 'My Personal Portfolio',
+    paragraph:
+      'A personal portfolio website crafted with Next.js, Framer Motion, and Tailwind CSS, showcasing projects, background details, and contact options.',
+    github: 'https://github.com/ofeng1/portfolio',
   },
   {
     id: 4,

@@ -11,17 +11,12 @@ const rows = [
     description: 'NICE TO MEET YOU!',
     id: 0,
     children: (
-      <div className="relative flex flex-col items-center w-full px-2 sm:px-3 text-left gap-1">
-        <div className="w-full flex justify-center mb-8">
-          <video
-            className="
+      <div className="flex flex-col w-full mx-auto text-left gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 px-1 sm:px-1 md:px-2 max-w-[95%] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px]">
+        <video
+          className="
               relative
-              w-[70vw] 
-              sm:w-[50vw] 
-              md:w-[40vw] 
-              lg:w-[32vw]
-              max-w-[350px]
-              min-w-[180px]
+              w-full
+              max-w-full
               aspect-video
               object-cover
               rounded-md
@@ -31,25 +26,22 @@ const rows = [
               transition-all
               duration-300
             "
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-          >
-            <source src="/images/about_me.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div className="relative z-10 w-full flex flex-col items-center max-w-[340px] min-w-[200px]">
-          <p className="text-white font-[Inter] font-light break-words text-[clamp(0.95rem,2.5vw,1.05rem)]">
-            I&apos;m <b>Owen Feng</b>, an engineer passionate about the fields of <b>finance</b>,{' '}
-            <b>software</b>, and <b>AI</b>. I enjoy working on all kinds of projects in these areas,
-            whether it’s building predictive models, creating scalable systems, or designing simple
-            apps people enjoy using. I’ve worked in startups, led data science projects, and spent
-            plenty of time hands-on with code, always aiming to make complex ideas easy to
-            understand and use.
-          </p>
-        </div>
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+        >
+          <source src="/images/about_me.mp4" type="video/mp4" />
+        </video>
+        <p className="text-white font-[Inter] font-light break-words leading-snug text-[0.9rem] sm:text-[0.95rem] md:text-[0.98rem] lg:text-[1.02rem]">
+          I&apos;m <b>Owen Feng</b>, an engineer passionate about the fields of <b>finance</b>,{' '}
+          <b>software</b>, and <b>AI</b>. I enjoy working on all kinds of projects in these areas,
+          whether it’s building predictive models, creating scalable systems, or designing simple
+          apps people enjoy using. I’ve worked in startups, led data science projects, and spent
+          plenty of time hands-on with code, always aiming to make complex ideas easy to understand
+          and use.
+        </p>
       </div>
     ),
   },
@@ -58,7 +50,7 @@ const rows = [
     description: 'MY SCHOOL + RELEVANT STATS',
     id: 1,
     children: (
-      <div className="flex flex-col w-full mx-auto text-left gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 px-1 sm:px-2 md:px-3 max-w-[90%] sm:max-w-[420px] md:max-w-[420px] lg:max-w-[480px] xl:max-w-[500px]">
+      <div className="flex flex-col w-full mx-auto text-left gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 px-1 sm:px-1 md:px-2 max-w-[95%] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px]">
         <img
           src="/images/ucsb_img.png"
           alt="UCSB Logo"
@@ -88,8 +80,8 @@ const rows = [
     description: 'SOME SKILLS I OFFER',
     id: 2,
     children: (
-      <div className="flex justify-center items-center w-full max-w-[500px] mx-auto px-2 sm:px-4">
-        <div className="w-full max-w-[420px] sm:max-w-[480px] md:max-w-[500px] flex items-center justify-center origin-center scale-[0.7] sm:scale-[0.85] md:scale-100">
+      <div className="flex justify-center items-center w-full max-w-[800px] mx-auto px-1 sm:px-2">
+        <div className="w-full max-w-[600px] sm:max-w-[700px] md:max-w-[800px] flex items-center justify-center origin-center scale-[0.7] sm:scale-[0.85] md:scale-100">
           <Carousel />
         </div>
       </div>
@@ -122,7 +114,7 @@ const rows = [
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="flex flex-col gap-[1rem] items-center justify-center w-full max-w-[350px] sm:max-w-[300px]"
+          className="flex flex-col gap-[1rem] items-center justify-center w-full max-w-[500px] sm:max-w-[600px]"
         >
           <motion.div
             variants={{
@@ -133,14 +125,14 @@ const rows = [
                 transition: { type: 'spring', stiffness: 500, damping: 30 },
               },
             }}
-            className="flex aspect-square w-[50vw] sm:w-[40vw] md:w-[16vw] lg:w-[14vw] xl:w-[12vw]
+            className="flex aspect-[4/5] w-[50vw] sm:w-[40vw] md:w-[16vw] lg:w-[14vw] xl:w-[12vw]
                         max-w-[220px] min-w-[110px]
                         bg-[linear-gradient(to_bottom,rgba(0,0,0,1)_75%,rgba(0,0,0,0.3)_100%)]
-                        text-white border border-gray-400 rounded-[20px] p-3 md:p-4
+                        text-white border border-gray-400 p-3 md:p-4
                         items-center justify-center
                         transition-[width,height] duration-200 ease-[cubic-bezier(0.25,0.1,0.25,1)]"
             whileHover={{
-              scale: 1.06,
+              scale: 1.02,
               background:
                 'linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(143, 143, 143, 0.3) 100%)',
             }}
@@ -149,11 +141,11 @@ const rows = [
               src="/images/sonnet_ai_img.png"
               alt="Sonnet AI"
               className="w-[60%] sm:w-[65%] md:w-[70%] max-w-[120px] h-auto object-contain"
-              style={{ aspectRatio: '1 / 1' }}
+              style={{ aspectRatio: '1 / 4' }}
             />
           </motion.div>
 
-          <div className="flex flex-col gap-[0.5rem] w-full max-w-[300px] text-center">
+          <div className="flex flex-col gap-[0.5rem] w-full max-w-[500px] text-center">
             <p className="text-white font-[Inter] text-[120%] sm:text-[140%] font-medium">
               <b>Sonnet AI</b>
             </p>
@@ -173,7 +165,7 @@ const rows = [
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="flex flex-col gap-[1rem] items-center justify-center w-full max-w-[350px] sm:max-w-[300px]"
+          className="flex flex-col gap-[1rem] items-center justify-center w-full max-w-[500px] sm:max-w-[600px] h-[80%]"
         >
           <motion.div
             variants={{
@@ -184,14 +176,14 @@ const rows = [
                 transition: { type: 'spring', stiffness: 500, damping: 30 },
               },
             }}
-            className="flex aspect-square w-[50vw] sm:w-[40vw] md:w-[16vw] lg:w-[14vw] xl:w-[12vw]
+            className="flex aspect-[4/5] w-[50vw] sm:w-[40vw] md:w-[16vw] lg:w-[14vw] xl:w-[12vw]
                         max-w-[220px] min-w-[110px]
                         bg-[linear-gradient(to_bottom,rgba(0,0,0,1)_75%,rgba(0,0,0,0.3)_100%)]
-                        text-white border border-gray-400 rounded-[20px] p-3 md:p-4
+                        text-white border border-gray-400 p-3 md:p-4
                         items-center justify-center
                         transition-[width,height] duration-200 ease-[cubic-bezier(0.25,0.1,0.25,1)]"
             whileHover={{
-              scale: 1.06,
+              scale: 1.02,
               background:
                 'linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(143, 143, 143, 0.3) 100%)',
             }}
@@ -200,11 +192,11 @@ const rows = [
               src="/images/vannevar_img.png"
               alt="Vannevar Labs"
               className="w-[60%] sm:w-[65%] md:w-[70%] max-w-[120px] h-auto object-contain"
-              style={{ aspectRatio: '1 / 1' }}
+              style={{ aspectRatio: '1 / 4' }}
             />
           </motion.div>
 
-          <div className="flex flex-col gap-[0.5rem] w-full max-w-[300px] text-center">
+          <div className="flex flex-col gap-[0.5rem] w-full max-w-[500px] text-center">
             <p className="text-white font-[Inter] text-[120%] sm:text-[140%] font-medium">
               <b>Vannevar Labs</b>
             </p>
@@ -244,9 +236,9 @@ export default function Table() {
   return (
     <div
       className="absolute left-1/2 -translate-x-1/2 bottom-[10%] md:bottom-[15%] z-[200] 
-            flex flex-col md:flex-row w-[90vw] max-w-[99vw] h-auto md:h-[75%] gap-6 md:gap-[10%] items-stretch md:items-center
+            flex flex-col md:flex-row w-[95vw] max-w-[99vw] h-auto md:h-[75%] gap-6 md:gap-[10%] items-stretch md:items-center
             bg-[rgba(108,108,108,0.3)] backdrop-blur-[10px] backdrop-saturate-[1.8]
-            border-2 border-[rgba(207,207,207,0.2)] rounded-xl px-4 md:px-[5%] py-4 md:py-[2%]"
+             border-2 border-[rgba(207,207,207,0.2)] px-2 md:px-[2%] py-4 md:py-[2%]"
     >
       <ul className="list-none m-0 flex flex-col gap-0 w-full md:w-[55%] pl-0 md:pl-[5%] border-l-0">
         {rows.map((row, idx) => (

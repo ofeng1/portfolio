@@ -11,7 +11,7 @@ type HomeProps = {
 
 const Home = forwardRef<HTMLElement, HomeProps>(function Home(_props, ref) {
   return (
-    <motion.section ref={ref} className="bg-black w-full h-[300vh]">
+    <motion.section ref={ref} className="bg-black w-full h-[500vh]">
       <Signature text="Welcome." image={image4.src} />
     </motion.section>
   );
