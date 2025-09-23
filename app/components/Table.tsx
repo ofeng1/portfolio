@@ -4,6 +4,7 @@ import TableElement from './TableElement';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Carousel from './Carousel';
+import TwoSidedArrow from './TwoSidedArrow';
 
 const rows = [
   {
@@ -81,8 +82,10 @@ const rows = [
     id: 2,
     children: (
       <div className="flex justify-center items-center w-full max-w-[800px] mx-auto px-1 sm:px-2">
-        <div className="w-full max-w-[600px] sm:max-w-[700px] md:max-w-[800px] flex items-center justify-center origin-center scale-[0.7] sm:scale-[0.85] md:scale-100">
+        <div className="relative flex flex-col w-full max-w-[600px] sm:max-w-[700px] md:max-w-[800px] items-center justify-center origin-center scale-[0.7] sm:scale-[0.85] md:scale-100 gap-8">
           <Carousel />
+          <div className="h-1"></div>
+          <TwoSidedArrow centerText="MOST EXPERIENCED" />
         </div>
       </div>
     ),
