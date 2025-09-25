@@ -85,7 +85,7 @@ function ContactMe() {
 
   return (
     <HorizontalEffect delay={0.2} sectionHeight="800vh" images={heroImages}>
-      <div className="flex items-center justify-center" style={{ gap: 'clamp(20vw, 40vw, 60vw)' }}>
+      <div className="flex items-center justify-center" style={{ gap: 'clamp(44vw, 64vw, 84vw)' }}>
         <div className="text-black font-semibold [font-family:Inter] leading-[1] text-center whitespace-pre text-[clamp(4rem,50vw,50rem)]">
           {Array.from(text).map((ch, i) => (
             <Letter key={i} ch={ch} />

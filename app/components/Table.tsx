@@ -13,7 +13,7 @@ const rows = [
     id: 0,
     children: (
       <div className="flex flex-col w-full mx-auto text-left gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 px-1 sm:px-1 md:px-2 max-w-[95%] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px]">
-        <video
+        <img
           className="
               relative
               w-full
@@ -27,14 +27,8 @@ const rows = [
               transition-all
               duration-300
             "
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-        >
-          <source src="/images/about_me.mp4" type="video/mp4" />
-        </video>
+          src="/images/me.jpg"
+        />
         <p className="text-white font-[Inter] font-light break-words leading-snug text-[0.9rem] sm:text-[0.95rem] md:text-[0.98rem] lg:text-[1.02rem]">
           I&apos;m <b>Owen Feng</b>, an engineer passionate about the fields of <b>finance</b>,{' '}
           <b>software</b>, and <b>AI</b>. I enjoy working on all kinds of projects in these areas,
@@ -48,7 +42,7 @@ const rows = [
   },
   {
     title: 'EDUCATION',
-    description: 'MY SCHOOL + RELEVANT STATS',
+    description: 'SCHOOL / RELEVANT STATS',
     id: 1,
     children: (
       <div className="flex flex-col w-full mx-auto text-left gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 px-1 sm:px-1 md:px-2 max-w-[95%] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px]">
@@ -216,7 +210,7 @@ const rows = [
   },
   {
     title: 'RESUME',
-    description: 'GRAB A COPY ON YOUR WAY OUT!',
+    description: 'GRAB ONE ON YOUR WAY OUT!',
     alt_description: 'CLICK HERE TO DOWNLOAD',
     id: 4,
     link: '/pdfs/OwenFeng_resume-3.pdf',
