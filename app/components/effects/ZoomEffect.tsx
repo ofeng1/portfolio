@@ -27,7 +27,7 @@ export default function ZoomEffect({ text, children, targetRef }: ZoomEffectProp
   const scale = useTransform(scrollYProgress, [0, 0.08, 0.85], [3, 3, 750]);
   const panY = useTransform(scrollYProgress, [0.08, 0.85], [0, -2000]);
   const panX = useTransform(scrollYProgress, [0.08, 0.85], [0, 300]);
-  const imgY = useTransform(scrollYProgress, [0.13, 1], [50, -50]);
+  const imgY = useTransform(scrollYProgress, [0.13, 1], [80, 50]);
   const divY = useTransform(
     scrollYProgress,
     [0.63, 0.73, 0.83, 1],
@@ -64,7 +64,7 @@ export default function ZoomEffect({ text, children, targetRef }: ZoomEffectProp
 
         <motion.div
           className="absolute inset-0 m-auto w-full h-auto aspect-[200/115] origin-center z-[96]"
-          style={{ scale: 1.15, opacity: imgFade, y: imgY }}
+          style={{ scale: 1.1, opacity: imgFade, y: imgY }}
         >
           {children}
         </motion.div>

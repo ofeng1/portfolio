@@ -9,9 +9,6 @@ import ContactPhone from '../../public/images/contact_phone.svg';
 import ContactLinkedin from '../../public/images/contact_linkedin.svg';
 import Owen from '../../public/images/contact_owen.svg';
 
-// Use direct public URLs to avoid TypeScript module resolution for non-standard extensions
-// and reduce bundle size.
-
 type Ring = {
   key: number;
   viewBox: string;
@@ -74,8 +71,8 @@ function ContactMe() {
     { src: '/images/IMG_9127.JPG', width: 200, height: 300 },
     { src: '/images/IMG_6943.JPG', width: 200, height: 200 },
     { src: '/images/IMG_7151.JPG', width: 200, height: 200 },
-    { src: '/images/IMG_1466.HEIC', width: 200, height: 300 },
-    { src: '/images/IMG_0795.HEIC', width: 200, height: 200 },
+    { src: '/images/IMG_1466.jpg', width: 200, height: 300 },
+    { src: '/images/IMG_0795.jpg', width: 200, height: 200 },
     { src: '/images/IMG_9526.JPG', width: 300, height: 200 },
   ];
 

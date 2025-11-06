@@ -215,7 +215,7 @@ const rows = [
     id: 4,
     link: '/pdfs/OwenFeng_resume-4.pdf',
     children: (
-      <div className="flex flex-col items-center justify-center w-[95%] gap-2 sm:gap-3 md:gap-4 px-0">
+      <div className="flex justify-center items-center w-[80%] max-w-[800px] mx-auto px-1 sm:px-2">
         <img src="/images/resume_img.png" alt="Resume thumbnail" style={{ aspectRatio: '3 / 4' }} />
       </div>
     ),
