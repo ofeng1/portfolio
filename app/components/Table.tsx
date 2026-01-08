@@ -213,7 +213,7 @@ const rows = [
     description: 'GRAB ONE ON YOUR WAY OUT!',
     alt_description: 'CLICK HERE TO DOWNLOAD',
     id: 4,
-    link: '/pdfs/OwenFeng_resume-4.pdf',
+    link: '/pdfs/OwenFeng_resume-7.pdf',
     children: (
       <div className="flex justify-center items-center w-[80%] max-w-[800px] mx-auto px-1 sm:px-2">
         <img src="/images/resume_img.png" alt="Resume thumbnail" style={{ aspectRatio: '3 / 4' }} />
